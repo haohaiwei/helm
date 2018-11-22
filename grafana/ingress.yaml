@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: grafana
+  namespace: default
+spec:
+  rules:
+  - host: grafana.tc.echosoul.cn
+    http:
+      paths:
+      - backend:
+          serviceName: grafana-grafana 
+          servicePort: 3000 
