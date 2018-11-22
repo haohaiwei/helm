@@ -1,0 +1,14 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: prometheus
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 120Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data"
